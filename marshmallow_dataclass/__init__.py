@@ -447,7 +447,7 @@ def field_for_schema(
                 metadata["default"] = metadata.get("default", None)
                 metadata["missing"] = metadata.get("missing", None)
                 metadata["required"] = False
-            subtypes = [t for t in arguments if t is not NoneType]  # type: ignore
+            subtypes = [t for t in arguments if t is not NoneType]
             if len(subtypes) == 1:
                 return field_for_schema(
                     subtypes[0], metadata=metadata, base_schema=base_schema
